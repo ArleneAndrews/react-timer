@@ -1,5 +1,5 @@
 const increaseCounter = () => {
-  <button onClick={this.setState({counter: this.state.counter - 1})}>Down</button>;
+  <button onClick={this.setState({counter: this.state.counter + 1})}>Up</button>;
 } 
 
 const decreaseCounter = () => {
@@ -18,4 +18,5 @@ class App extends React.Component {
     </div>;
   }
 }
+
 ReactDOM.render(<App />, document.querySelector('#root'));
