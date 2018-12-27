@@ -1,0 +1,7 @@
+Buttons
+up button
+    shows
+    adds 1 to counter
+down button
+   shows
+   subtracts one from counter
