@@ -1,11 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-    
-import App from './timer.js';
-    
-    
+import App from '/.app';
 
 ReactDOM.render(
-    <App />,
-    document.getElementById('app')
+  <App />,
+  document.getElementById("root")
 );
