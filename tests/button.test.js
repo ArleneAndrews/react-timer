@@ -1,4 +1,8 @@
-import TestRenderer from 'react-test-renderer';
+import React from 'react'
+import {renderIntoDocument, cleanup} from 'react-testing-library';
+import {App} from 'timer'
+
+afterEach(cleanup)
 
 describe('Buttons', () => {
     describe('Up button', () => {
@@ -9,11 +13,9 @@ describe('Buttons', () => {
              component, 'button'
             )
             }) */
-        it('Increases count by one', () => {
+        it('Displays on screen', () => {
+            renderIntoDocument(<App />);
             
-            const makemevisible = TestRenderer.create(<App />);
-            const up = makemevisible.this.button;
-            ReactTestUtils.Simulate.click(up);
         });
     })
 })

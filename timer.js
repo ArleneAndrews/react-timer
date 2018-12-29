@@ -1,24 +1,53 @@
-this.counterState = this.state.counter.bind(this);
+import React, { Component } from 'react';
 
-const increaseCounter = () => {
-  <button onClick={this.setState({counter: this.counterState + 1})}>Up</button>;
-} 
+class App extends Component {
+  constructor() {
+    super();
 
-const decreaseCounter = () => {
-  <button onClick={this.setState({counter: this.counterState - 1})}>Down</button>;
-}
+    this.state = {
+      counter: 0,
+    };
 
-class App extends React.Component {
-  state = {counter: 0}
+    this.onIncrement = this.onIncrement.bind(this);
+    this.onDecrement = this.onDecrement.bind(this);
+  }
+
+  onIncrement() {
+    this.setState((prevState) => ({
+      counter: prevState.counter + 1,
+    }));
+  }
+
+  onDecrement() {
+    this.setState((prevState) => ({
+      counter: prevState.counter - 1,
+    }));
+  }
 
   render() {
-    return <div>
-      {this.state.counter}
-      <p />
-      <increaseCounter />
-      <decreaseCounter />
-    </div>;
+    const { counter } = this.state;
+
+    return (
+      <div>
+        <h1>My Counter</h1>
+        <p>{counter}</p>
+
+        <button
+          type="button"
+          onClick={this.onIncrement}
+        >
+          Increment
+        </button>
+
+        <button
+          type="button"
+          onClick={this.onDecrement}
+        >
+          Decrement
+        </button>
+      </div>
+    );
   }
 }
 
-ReactDOM.render(<App />, document.querySelector('#root'));
+export default App;
