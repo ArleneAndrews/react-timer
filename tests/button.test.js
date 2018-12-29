@@ -9,10 +9,11 @@ describe('Buttons', () => {
              component, 'button'
             )
             }) */
-            it('Increases count by one', () => {
-                const testRenderer = TestRenderer.create(<App />);
-                const up = this.button;
-                ReactTestUtils.Simulate.click(up);
-                })
+        it('Increases count by one', () => {
+            
+            const makemevisible = TestRenderer.create(<App />);
+            const up = makemevisible.this.button;
+            ReactTestUtils.Simulate.click(up);
+        });
     })
 })
