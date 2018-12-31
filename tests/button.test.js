@@ -10,6 +10,7 @@ it('renders without crashing', () => {
     ReactDOM.render(<App />, div);
   });
 
+  
 /* describe('Buttons', () => {
     describe('Up button', () => {
         it('Displays on screen', () => {
